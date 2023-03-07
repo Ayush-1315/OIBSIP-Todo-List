@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Tilt+Prism&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Iso&family=Tilt+Neon&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+:root{
+    --color:white;
+    --body-font:2rem;
+    --nav-font:2.5rem;
+    --foot-font:1rem;
+    --nav-family: 'Tilt Prism', cursive;
+    --body-family:'Rubik Iso', cursive;
+    --list-Family:'Tilt Neon', cursive;
+    --input-Box:30vw;
+    --list-Box:50vw;
+    --header-footer:#191825;
+    --inputField:#865DFF;
+    --head-foot-color:#E384FF;
+    --list-Font-Size:1.5rem;
+    --input-color:#FFA3FD;
+}
+#container{
+    background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+    height: 100vh;
+}
+header{
+    color: var(--head-foot-color);
+    padding:1.5rem;
+    max-height:10vh;
+    font-family: var(--nav-family);
+    font-size: var(--nav-font);
+    background-color: var(--header-footer);
+}
+.app{
+    height:80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+input,textarea{
+    display: block;
+    margin:0.5rem 0;
+    width:100%;
+    padding:0.5rem;
+    border-radius: 0.2rem;
+    resize: none;
+    border: 1px solid transparent;
+}
+.inputFields{
+background-color: var(--inputField  );
+border-radius: 0.5rem;
+padding:1rem;
+width:var(--input-Box);
+font-size: var(--body-font);
+font-family: var(--body-family);
+color:var(--input-color);
+}
+#submit{
+    background-color: var(--header-footer);
+    padding:0.5rem;
+    text-align: center;
+    color:var(--input-color);
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+.listContainer{
+    background-color: var(--inputField);
+    color:var(--input-color);
+    margin:1rem;
+    width:var(--list-Box);
+    max-height:70vh;
+    font-size:var(--list-Font-Size);
+    padding:0.5rem;
+    border-radius: 0.5rem;
+}
+.listHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    font-family: var(--body-family);
+}
+.delete{
+    background-color: red;
+    padding:0.2rem;
+    border-radius: 0.2rem;
+    color:white;
+    cursor: pointer;
+}
+.list{
+    display: flex;
+    position: relative;
+    width:98%;
+    height:fit-content;
+    font-family:var(--list-Family);
+    justify-content: space-between;
+    font-size: 1rem;
+    margin:0.5rem;
+    background-color: rgba(255,255,255,0.15);
+    backdrop-filter: blur(5px);
+    filter:drop-shadow(0,0,15px,0,rgba(0,0,0,.25));
+    padding:0.5rem;
+    border-radius: 0.5rem;
+}
+.title{
+width:15%;
+word-wrap: break-word;
+}
+.vertically-center{
+    margin:0;
+    position:absolute;
+    top: 50%;
+    transform: translateY(50%);
+}
+p{
+    display: inline-block;
+    height:fit-content;
+    width:60%;
+    word-wrap: break-word;
+}
+.redBg{
+    background-color: red;
+    border-radius: 0.2rem;
+    padding:0.1rem 0.2rem;
+    cursor: pointer;
+}
+footer{
+    color: var(--head-foot-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--header-footer);
+    padding:1rem;
+    height:10vh;
+    text-align: center;
+    font-size:var(--foot-font);
+    font-family: var(--list-Family);
+}
+a{
+    margin:0.5rem;
+    font-size: 1.5rem;
+}
+/* Media Queries */
+@media screen and (max-width: 1024px){
+    :root{
+        --expression-pad:2.38rem;
+    }
+    #calculator-body{
+        width:50vw;
+    }
+    .btn{
+        width:9vw;
+    }
+}
+@media screen and (max-width: 720px){
+    :root{
+        --expression-pad:2.38rem;
+    }
+    #calculator-body{
+        width:55vw;
+    }
+    .btn{
+        width:9vw;
+    }
+}
+
+@media screen and (max-width: 720px){
+    :root{
+        --nav-font:1.5rem;
+        --input-Box:85vw;
+        --list-Box:85vw;
+        --list-Font-Size:1.5rem;
+        --foot-font:1rem;
+    }
+}
+@media screen and (max-width: 480px){
+    :root{
+        --nav-font:1.5rem;
+        --input-Box:85vw;
+        --list-Box:85vw;
+        --list-Font-Size:1rem;
+        --foot-font:1rem;
+    }
+}
